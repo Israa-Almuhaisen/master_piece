@@ -1,0 +1,163 @@
+.container-fluid.main{
+    position: relative; /* To make the navbar positions relative to this container */
+    padding: 0;
+  }
+  #myCarousel{
+    margin-top: -20px;
+  }
+  
+  .carousel .background {
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+  }
+  .col-lg-10{
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+  }
+
+  @media (max-width:900px) {
+ 
+    .col-lg-10 h1{
+        font-size: xx-large;
+    }
+    .col-lg-10 h3{
+        font-size: x-large;
+
+    }
+    .explore .btn-lg{
+        padding: 12px 17px !important;
+        font-size: 35px !important;
+    }
+  
+  }
+  
+  @media (max-width:400px) {
+    .carousel .background {
+      background-size: cover; /* To make the background image looks good */
+    }
+    .col-lg-10 h1{
+        font-size: xx-large;
+    }
+    .col-lg-10 h3{
+        display: none;
+    }
+    .explore .btn-lg{
+        padding: 7px 9px !important;
+        font-size:20px !important;
+    }
+  }
+
+  .carousel .background.a {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./image/background1.jpg");
+  }
+  
+  .carousel .background.b {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./image/ttttttt.jpg");
+  }
+  
+  .carousel .background.c {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./image/hhhhhhhh.jpg");
+  }
+  .carousel .background.d {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./image/llllll.jpg");
+  }
+  
+  
+  .carousel-fade .carousel-inner .item {
+    opacity: 0;
+    transition: opacity 0.5s; /* The 0.5s describes the duration to make the opacity from 0 to 1 */
+  }
+  
+  .carousel-fade .carousel-inner .active {
+    opacity: 1;
+  }
+  
+  /* CSS Hack to trigger GPU for smooth transition */
+  @media all and (transform-3d),
+  (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  /* CSS Hack to trigger GPU for smooth transition */
+  
+  .covertext {
+    position: absolute; /* To make the div to be place anywhere. It is out of the document flow */
+    top: 170px; /* The distance between the div with the top of document */
+    left: 0px; /* Make the div full width */
+    right: 0px; /* Make the div full width */
+  }
+  
+  .title {
+    font-family: Verdana;
+    font-weight: 600;
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-family: Verdana;
+    font-size: 23px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .explore {
+    text-align: center;
+    margin-top: 10px;
+    
+  }
+  
+ 
+  .explore .btn-lg{
+    border-radius: 30px;
+    padding: 15px 25px;
+    font-size: 22px;
+    background-image: none;
+    background: #90184e;
+    border-color: #c7799c;
+    color: #ffffff;
+    box-shadow: 1px 3px 3px #828181;
+  }
+  
+  
+  .explore .btn-lg:hover {
+    border-radius: 25px;
+    background-image: none;
+    background: #bc1761;
+    border-color: #471d30;
+    color: #ffffff;
+    /* text-shadow:2px 2px #cb9cb1; */
+    box-shadow: none;
+    /* margin-bottom: 20px; */
+    outline:none;
+  }
+  
+  .btn:focus,
+  .btn:active:focus,
+  .btn.active:focus,
+  .btn.focus,
+  .btn:active.focus,
+  .btn.active.focus {
+    color: #ffffff;
+    outline: none;
+  }
